@@ -2,29 +2,17 @@ import * as React from "react"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Disclosure, Menu, Transition } from "@headlessui/react"
-import { BellIcon, MenuIcon, XIcon } from "@heroicons/react/outline"
+import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
-import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
 
 import "../styles/global.css"
 
-const user = {
-  name: "Tom Cook",
-  email: "tom@example.com",
-  imageUrl:
-    "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
-}
 const navigation = [
   { name: "About Us", href: "#", current: false },
   { name: "Research", href: "#", current: false },
   { name: "Get Involved", href: "#", current: false },
-]
-const userNavigation = [
-  // { name: "Your Profile", href: "#" },
-  // { name: "Settings", href: "#" },
-  { name: "Sign out", href: "#" },
 ]
 
 function classNames(...classes) {
@@ -114,7 +102,7 @@ const IndexPage = () => (
       <main>
         <div className="max-w-7xl mx-auto ">
           {/* Replace with your content */}
-          <div className="m:px-0 relative ">
+          <div className="m:px-0 relative">
             <StaticImage
               src="../images/vaccine_clinic.jpeg"
               alt="A person with their fist raised, holding a pride flag, and standing in front of two signs"
