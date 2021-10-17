@@ -107,7 +107,7 @@ const IndexPage = () => (
               src="../images/vaccine_clinic.jpeg"
               alt="A person with their fist raised, holding a pride flag, and standing in front of two signs"
             />
-            <div className="absolute inset-8">
+            <div className="absolute inset-8 hidden lg:block">
               <h1 className="text-white text-9xl">
                 Everyday care for everyday people.
               </h1>
