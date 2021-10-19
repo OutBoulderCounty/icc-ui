@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Disclosure } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
+import { useLocation } from "react-router"
 
 import Button from "./button"
 
@@ -13,6 +14,12 @@ type navItem = {
   path: string
   Icon: React.FC<IconProps>
   className?: string
+  Link: React.FC<LinkProps>
+}
+
+type LinkProps = {
+  to: string
+  className?: string
 }
 
 type navOptions = {
@@ -20,10 +27,13 @@ type navOptions = {
 }
 
 const NavItem: React.FC<navItem> = item => {
-  const current = window.location.pathname === item.path
+  const location = useLocation()
+  const current = [window.location.pathname, location.pathname].includes(
+    item.path
+  )
   return (
-    <a
-      href={item.path}
+    <item.Link
+      to={item.path}
       className={`font-medium text-sm ${item.className} ${
         current
           ? "border-violet text-gray-900"
@@ -32,7 +42,7 @@ const NavItem: React.FC<navItem> = item => {
     >
       <item.Icon className="mr-4 flex-shrink-0 h-6 w-6" />
       {item.name}
-    </a>
+    </item.Link>
   )
 }
 
@@ -63,6 +73,7 @@ const NavBar: React.FC<navOptions> = ({ items }) => {
                       Icon={item.Icon}
                       key={item.name}
                       className="inline-flex items-center px-1 pt-1 border-b-2"
+                      Link={item.Link}
                     />
                   ))}
                 </div>
@@ -83,6 +94,7 @@ const NavBar: React.FC<navOptions> = ({ items }) => {
                   Icon={item.Icon}
                   key={item.name}
                   className="pl-3 pr-4 py-2 border-l-4 flex"
+                  Link={item.Link}
                 />
               ))}
             </div>
@@ -93,4 +105,5 @@ const NavBar: React.FC<navOptions> = ({ items }) => {
   )
 }
 
+export type { navItem }
 export default NavBar

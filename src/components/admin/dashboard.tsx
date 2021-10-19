@@ -3,16 +3,26 @@ import { Dialog, Transition } from "@headlessui/react"
 import { HomeIcon, XIcon, ClipboardIcon } from "@heroicons/react/outline"
 import { useAuth0 } from "@auth0/auth0-react"
 import { Link } from "gatsby"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link as RouterLink,
+} from "react-router-dom"
 
 import Button from "../button"
 import Error from "../error"
-import NavBar from "../navBar"
+import NavBar, { navItem } from "../navBar"
 import Forms from "./forms"
 
-const navigation = [
-  { name: "Dashboard", path: "/admin", Icon: HomeIcon },
-  { name: "Forms", path: "/admin/forms", Icon: ClipboardIcon },
+const navigation: navItem[] = [
+  { name: "Dashboard", path: "/admin", Icon: HomeIcon, Link: RouterLink },
+  {
+    name: "Forms",
+    path: "/admin/forms",
+    Icon: ClipboardIcon,
+    Link: RouterLink,
+  },
 ]
 
 const Home: React.FC = () => {
