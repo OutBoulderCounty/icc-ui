@@ -7,7 +7,7 @@ import Dashboard from "../components/admin/dashboard"
 import Seo from "../components/seo"
 
 const Dash = withAuthenticationRequired(Dashboard, {
-  returnTo: "/admin",
+  returnTo: `${window.location.origin}/admin`,
 })
 
 const Admin: React.FC = () => {
