@@ -1,35 +1,9 @@
 import * as React from "react"
+import { useQuery } from "react-query"
+import { useAuth0 } from "@auth0/auth0-react"
 
-const people = [
-  {
-    name: "Jane Cooper",
-    title: "Regional Paradigm Technician",
-    role: "Admin",
-    email: "jane.cooper@example.com",
-  },
-  {
-    name: "Cody Fisher",
-    title: "Product Directives Officer",
-    role: "Owner",
-    email: "cody.fisher@example.com",
-  },
-  // More people...
-]
-
-const forms = [
-  {
-    _id: "1",
-    name: "Form One",
-    required: false,
-    live: true,
-  },
-  {
-    _id: "2",
-    name: "Form Two",
-    required: true,
-    live: false,
-  },
-]
+import Loader from "../loader"
+import Error from "../error"
 
 type ActiveProps = {
   isActive: boolean
@@ -48,13 +22,59 @@ const Active: React.FC<ActiveProps> = ({ isActive, className, children }) => {
   )
 }
 
+type Form = {
+  _id: string
+  name: string
+  required: boolean
+  live: boolean
+}
+
+type Error = {
+  error: string
+}
+
 const Forms: React.FC = () => {
+  const { getAccessTokenSilently, getAccessTokenWithPopup } = useAuth0()
+  const { data, isLoading, error } = useQuery<Form[], Error>(
+    "forms",
+    async () => {
+      const audience = "https://api.inclusivecareco.org"
+      const scope = "admin:all"
+      let token: string
+      try {
+        token = await getAccessTokenSilently({
+          audience,
+          scope,
+        })
+      } catch (err) {
+        token = await getAccessTokenWithPopup({
+          audience,
+          scope,
+          display: "wap",
+        })
+      }
+      return await (
+        await fetch(`${process.env.GATSBY_API_URL}/forms`, {
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+        })
+      ).json()
+    }
+  )
+  if (isLoading) {
+    return <Loader />
+  }
+  if (error) {
+    return <Error message={String(error)} />
+  }
   return (
-    <div className="flex flex-col">
-      <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div className="flex flex-col h-full">
+      <div className="-my-2 sm:-mx-6 lg:-mx-8">
         <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
-          <div className="shadow overflow-hidden sm:rounded-lg">
-            <table className="divide-y divide-gray-200 table-auto max-w-xl mx-auto border border-gray-200">
+          <div className="shadow sm:rounded-lg">
+            <table className="divide-y divide-gray-200 max-w-xl mx-auto border border-gray-200 h-full">
               <thead className="bg-gray-50">
                 <tr>
                   <th
@@ -80,8 +100,8 @@ const Forms: React.FC = () => {
                   </th>
                 </tr>
               </thead>
-              <tbody>
-                {forms.map((form, formIdx) => (
+              <tbody className="overflow-y-scroll">
+                {data.map((form, formIdx) => (
                   <tr
                     key={form._id}
                     className={formIdx % 2 === 0 ? "bg-white" : "bg-gray-50"}

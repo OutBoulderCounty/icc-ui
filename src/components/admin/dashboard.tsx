@@ -9,6 +9,7 @@ import {
   Route,
   Link as RouterLink,
 } from "react-router-dom"
+import { QueryClient, QueryClientProvider } from "react-query"
 
 import Button from "../button"
 import Error from "../error"
@@ -44,6 +45,8 @@ const Home: React.FC = () => {
   )
 }
 
+const queryClient = new QueryClient()
+
 const Dashboard: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
   const { logout, getIdTokenClaims } = useAuth0()
@@ -64,7 +67,7 @@ const Dashboard: React.FC = () => {
   if (userIsAdmin) {
     return (
       <Router>
-        <div className="h-screen flex overflow-hidden bg-gray-100">
+        <div className="h-screen flex bg-gray-100">
           <Transition.Root show={sidebarOpen} as={React.Fragment}>
             <Dialog
               as="div"
@@ -153,16 +156,20 @@ const Dashboard: React.FC = () => {
             </Dialog>
           </Transition.Root>
 
-          <div className="flex flex-col w-0 flex-1 overflow-hidden">
+          <div className="flex flex-col w-0 flex-1">
             <NavBar items={navigation} />
-            <Switch>
-              <Route path="/admin" exact>
-                <Home />
-              </Route>
-              <Route path="/admin/forms">
-                <Forms />
-              </Route>
-            </Switch>
+            <div className="overflow-y-scroll overflow-x-hidden">
+              <Switch>
+                <Route path="/admin" exact>
+                  <Home />
+                </Route>
+                <Route path="/admin/forms">
+                  <QueryClientProvider client={queryClient}>
+                    <Forms />
+                  </QueryClientProvider>
+                </Route>
+              </Switch>
+            </div>
           </div>
         </div>
       </Router>
