@@ -1,16 +1,6 @@
 import * as React from "react"
 import { Dialog, Transition } from "@headlessui/react"
-import {
-  CalendarIcon,
-  ChartBarIcon,
-  FolderIcon,
-  HomeIcon,
-  InboxIcon,
-  MenuIcon,
-  UsersIcon,
-  XIcon,
-  ClipboardIcon,
-} from "@heroicons/react/outline"
+import { HomeIcon, XIcon, ClipboardIcon } from "@heroicons/react/outline"
 import { useAuth0 } from "@auth0/auth0-react"
 import { Link } from "gatsby"
 
@@ -22,10 +12,6 @@ const navigation = [
   { name: "Dashboard", path: "/admin", Icon: HomeIcon },
   { name: "Forms", path: "/admin/forms", Icon: ClipboardIcon },
 ]
-
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-}
 
 const Dashboard: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
