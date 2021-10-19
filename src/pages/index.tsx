@@ -61,7 +61,14 @@ const IndexPage = () => (
                     ))}
                   </div>
                 </div>
-                <Button color="violet">Donate</Button>
+                <a
+                  href="https://outboulder.app.neoncrm.com/forms/5"
+                  target="_blank"
+                >
+                  <Button className="my-2" color="violet">
+                    Donate
+                  </Button>
+                </a>
                 <div className="-mr-2 flex items-center sm:hidden">
                   {/* Mobile menu button */}
                   <Disclosure.Button className="bg-white inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet">
@@ -104,20 +111,20 @@ const IndexPage = () => (
           {/* Replace with your content */}
           <div className="m:px-0 relative">
             <StaticImage
-              src="../images/vaccine_clinic.jpeg"
-              alt="A person with their fist raised, holding a pride flag, and standing in front of two signs"
+              src="../images/pride_balloons.jpeg"
+              alt="Pride balloons on a car"
             />
-            <div className="absolute inset-8 hidden lg:block">
-              <h1 className="text-white text-9xl">
-                Everyday care for everyday people.
+            <div className="absolute inset-8">
+              <h1 className="text-white text-4xl lg:text-7xl">
+                Find Affirming Care with Exceptional Providers
               </h1>
-              <p className="text-white pt-4">
-                We're an organization dedicated to helping all communities
-                across Colorado.
-              </p>
               <div className="flex pt-4">
-                <Button color="transparent">Discover</Button>
-                <Button color="white">Let's talk</Button>
+                <Button color="transparent" className="mx-2">
+                  Discover
+                </Button>
+                <Button color="white" className="mx-2">
+                  Let's talk
+                </Button>
               </div>
             </div>
           </div>
