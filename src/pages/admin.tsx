@@ -4,6 +4,7 @@ import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react"
 import Loader from "../components/loader"
 import Error from "../components/error"
 import Dashboard from "../components/admin/dashboard"
+import Seo from "../components/seo"
 
 const Dash = withAuthenticationRequired(Dashboard, {
   returnTo: "/admin",
@@ -18,7 +19,12 @@ const Admin: React.FC = () => {
   if (error) {
     return <Error message={error.message || "We failed"} />
   }
-  return <Dash />
+  return (
+    <>
+      <Seo title="Admin" />
+      <Dash />
+    </>
+  )
 }
 
 export default Admin
