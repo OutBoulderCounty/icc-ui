@@ -64,6 +64,7 @@ const IndexPage = () => (
                 <a
                   href="https://outboulder.app.neoncrm.com/forms/5"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   <Button className="my-2" color="violet">
                     Donate
