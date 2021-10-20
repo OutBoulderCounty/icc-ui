@@ -108,12 +108,13 @@ const IndexPage = () => (
       </Disclosure>
 
       <main>
-        <div className="max-w-7xl mx-auto ">
+        <div className="max-w-7xl mx-auto overflow-x-hidden">
           {/* Replace with your content */}
           <div className="m:px-0 relative">
             <StaticImage
               src="../images/pride_balloons.jpeg"
               alt="Pride balloons on a car"
+              className="w-screen"
             />
             <div className="absolute inset-8">
               <h1 className="text-white text-4xl lg:text-7xl">
