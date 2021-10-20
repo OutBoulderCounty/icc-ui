@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { HomeIcon, XIcon, ClipboardIcon } from "@heroicons/react/outline"
-import { useAuth0 } from "@auth0/auth0-react"
+import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react"
 import { Link } from "gatsby"
 import {
   BrowserRouter as Router,
@@ -175,6 +175,13 @@ const Dashboard: React.FC = () => {
       </Router>
     )
   }
+  const logoutFn = () => {
+    console.log("should be logging out now")
+    logout({
+      returnTo: `${window.location.origin}/admin`,
+    })
+    return null
+  }
   return (
     <>
       <Error message="User is not allowed to access the admin dashboard" />
@@ -183,14 +190,7 @@ const Dashboard: React.FC = () => {
           <Link to="/">
             <Button color="violet">Go home</Button>
           </Link>
-          <Button
-            color="violet"
-            onClick={() =>
-              logout({
-                returnTo: `${window.location.origin}/admin`,
-              })
-            }
-          >
+          <Button color="violet" onClick={logoutFn}>
             Logout
           </Button>
         </div>
@@ -199,4 +199,6 @@ const Dashboard: React.FC = () => {
   )
 }
 
-export default Dashboard
+export default withAuthenticationRequired(Dashboard, {
+  returnTo: `/admin`,
+})

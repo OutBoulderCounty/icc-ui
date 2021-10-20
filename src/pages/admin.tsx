@@ -6,10 +6,6 @@ import Error from "../components/error"
 import Dashboard from "../components/admin/dashboard"
 import Seo from "../components/seo"
 
-const Dash = withAuthenticationRequired(Dashboard, {
-  returnTo: `${window.location.origin}/admin`,
-})
-
 const Admin: React.FC = () => {
   const { isLoading, error } = useAuth0()
 
@@ -22,7 +18,7 @@ const Admin: React.FC = () => {
   return (
     <>
       <Seo title="Admin" />
-      <Dash />
+      <Dashboard />
     </>
   )
 }
