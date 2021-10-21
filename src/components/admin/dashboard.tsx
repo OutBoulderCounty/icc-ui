@@ -1,7 +1,6 @@
 import * as React from "react"
 import { Dialog, Transition } from "@headlessui/react"
 import { HomeIcon, XIcon, ClipboardIcon } from "@heroicons/react/outline"
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react"
 import { Link } from "gatsby"
 import {
   BrowserRouter as Router,
@@ -10,6 +9,7 @@ import {
   Link as RouterLink,
 } from "react-router-dom"
 import { QueryClient, QueryClientProvider } from "react-query"
+import { AuthorizedContent, useAuthUser } from "@frontegg/react"
 
 import Button from "../button"
 import Error from "../error"
@@ -49,23 +49,10 @@ const queryClient = new QueryClient()
 
 const Dashboard: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
-  const { logout, getIdTokenClaims } = useAuth0()
-  const [userIsAdmin, setUserIsAdmin] = React.useState(false)
+  const user = useAuthUser()
 
-  React.useEffect(() => {
-    getIdTokenClaims().then(token => {
-      let admin = false
-      if (token) {
-        const domain = "https://inclusivecareco.org"
-        const roles: string[] = token[`${domain}/roles`]
-        admin = roles.some(role => role === "Admin")
-      }
-      setUserIsAdmin(admin)
-    })
-  })
-
-  if (userIsAdmin) {
-    return (
+  return (
+    <AuthorizedContent requiredRoles={["Admin"]}>
       <Router>
         <div className="h-screen flex bg-gray-100">
           <Transition.Root show={sidebarOpen} as={React.Fragment}>
@@ -173,32 +160,30 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
       </Router>
-    )
-  }
-  const logoutFn = () => {
-    console.log("should be logging out now")
-    logout({
-      returnTo: `${window.location.origin}/admin`,
-    })
-    return null
-  }
-  return (
-    <>
-      <Error message="User is not allowed to access the admin dashboard" />
-      <div className="mx-auto max-w-lg">
-        <div className="justify-around flex">
-          <Link to="/">
-            <Button color="violet">Go home</Button>
-          </Link>
-          <Button color="violet" onClick={logoutFn}>
-            Logout
-          </Button>
-        </div>
-      </div>
-    </>
+    </AuthorizedContent>
   )
+  // const logoutFn = () => {
+  //   console.log("should be logging out now")
+  //   logout({
+  //     returnTo: `${window.location.origin}/admin`,
+  //   })
+  //   return null
+  // }
+  // return (
+  //   <>
+  //     <Error message="User is not allowed to access the admin dashboard" />
+  //     <div className="mx-auto max-w-lg">
+  //       <div className="justify-around flex">
+  //         <Link to="/">
+  //           <Button color="violet">Go home</Button>
+  //         </Link>
+  //         <Button color="violet" onClick={logoutFn}>
+  //           Logout
+  //         </Button>
+  //       </div>
+  //     </div>
+  //   </>
+  // )
 }
 
-export default withAuthenticationRequired(Dashboard, {
-  returnTo: `/admin`,
-})
+export default Dashboard

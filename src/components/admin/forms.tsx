@@ -1,6 +1,5 @@
 import * as React from "react"
 import { useQuery } from "react-query"
-import { useAuth0 } from "@auth0/auth0-react"
 
 import Loader from "../loader"
 import Error from "../error"
@@ -34,29 +33,30 @@ type Error = {
 }
 
 const Forms: React.FC = () => {
-  const { getAccessTokenSilently, getAccessTokenWithPopup } = useAuth0()
   const { data, isLoading, error } = useQuery<Form[], Error>(
     "forms",
     async () => {
-      const audience = "https://api.inclusivecareco.org"
-      const scope = "admin:all"
-      let token: string
-      try {
-        token = await getAccessTokenSilently({
-          audience,
-          scope,
-        })
-      } catch (err) {
-        token = await getAccessTokenWithPopup({
-          audience,
-          scope,
-          display: "wap",
-        })
-      }
+      // WIP
+
+      // const audience = "https://api.inclusivecareco.org"
+      // const scope = "admin:all"
+      // let token: string
+      // try {
+      //   token = await getAccessTokenSilently({
+      //     audience,
+      //     scope,
+      //   })
+      // } catch (err) {
+      //   token = await getAccessTokenWithPopup({
+      //     audience,
+      //     scope,
+      //     display: "wap",
+      //   })
+      // }
       return await (
         await fetch(`${process.env.GATSBY_API_URL}/forms`, {
           headers: {
-            Authorization: `Bearer ${token}`,
+            // Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
         })
