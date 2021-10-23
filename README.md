@@ -21,6 +21,12 @@ It is using:
    cd icc-ui
    ```
 
+1. Install dependencies
+
+   ```sh
+   npm install
+   ```
+
 1. Run the server
 
    ```sh
