@@ -35,4 +35,4 @@ It is using:
 
 ## Limitations
 
-- To do anything in the admin dashboard, you will need to have the backend services running as well. See the [OutBoulderCounty/icc-services](https://github.com/OutBoulderCounty/icc-services) for instructions.
+- To do anything in the admin dashboard, you will need to have a `.env.development` file (ask Clark for the appropriate values) and the backend services running as well. See the [OutBoulderCounty/icc-services](https://github.com/OutBoulderCounty/icc-services) for instructions.
