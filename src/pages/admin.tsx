@@ -1,24 +1,27 @@
 import * as React from "react"
-import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react"
+import { FronteggProvider } from "@frontegg/react"
 
 import Loader from "../components/loader"
 import Error from "../components/error"
 import Dashboard from "../components/admin/dashboard"
 import Seo from "../components/seo"
 
-const Admin: React.FC = () => {
-  const { isLoading, error } = useAuth0()
+const contextOptions = {
+  baseUrl: "https://icc.frontegg.com",
+}
 
-  if (isLoading) {
-    return <Loader />
-  }
-  if (error) {
-    return <Error message={error.message || "We failed"} />
-  }
+const Admin: React.FC = () => {
   return (
     <>
       <Seo title="Admin" />
-      <Dashboard />
+      <FronteggProvider
+        contextOptions={{
+          baseUrl: "https://icc.frontegg.com",
+          // urlPrefix: "/admin",
+        }}
+      >
+        <Dashboard />
+      </FronteggProvider>
     </>
   )
 }

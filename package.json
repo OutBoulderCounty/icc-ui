@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "icc-ui",
+  "private": false,
+  "description": "Frontend application for Inclusive Care Colorado",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Clark Winters <clwinters8@gmail.com>",
   "dependencies": {
     "@auth0/auth0-react": "^1.8.0",
     "@frontegg/react": "^3.0.14",

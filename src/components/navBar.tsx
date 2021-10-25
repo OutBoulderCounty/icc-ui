@@ -1,8 +1,7 @@
 import * as React from "react"
 import { Disclosure } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import { useLocation } from "react-router"
-import { useAuth0 } from "@auth0/auth0-react"
+import { Link, useLocation } from "react-router-dom"
 
 import Button from "./button"
 
@@ -48,13 +47,6 @@ const NavItem: React.FC<navItem> = item => {
 }
 
 const NavBar: React.FC<navOptions> = ({ items }) => {
-  const { logout } = useAuth0()
-  const logoutFn = () => {
-    logout({
-      returnTo: window.location.origin,
-    })
-    return null
-  }
   return (
     <Disclosure as="nav" className="bg-white shadow max-h-max">
       {({ open }) => (
@@ -88,9 +80,9 @@ const NavBar: React.FC<navOptions> = ({ items }) => {
               </div>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <Button color="violet" onClick={logoutFn}>
-                    Logout
-                  </Button>
+                  <Link to="/account/logout">
+                    <Button color="violet">Logout</Button>
+                  </Link>
                 </div>
               </div>
             </div>

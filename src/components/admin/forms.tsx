@@ -1,5 +1,6 @@
 import * as React from "react"
 import { useQuery } from "react-query"
+import { useAuthUser } from "@frontegg/react"
 
 import Loader from "../loader"
 import Error from "../error"
@@ -22,7 +23,7 @@ const Active: React.FC<ActiveProps> = ({ isActive, className, children }) => {
 }
 
 type Form = {
-  _id: string
+  id: string
   name: string
   required: boolean
   live: boolean
@@ -32,35 +33,26 @@ type Error = {
   error: string
 }
 
+type FormsOutput = {
+  forms: Form[]
+}
+
 const Forms: React.FC = () => {
-  const { data, isLoading, error } = useQuery<Form[], Error>(
+  const user = useAuthUser()
+  const { data, isLoading, error } = useQuery<FormsOutput, Error>(
     "forms",
     async () => {
       // WIP
-
-      // const audience = "https://api.inclusivecareco.org"
-      // const scope = "admin:all"
-      // let token: string
-      // try {
-      //   token = await getAccessTokenSilently({
-      //     audience,
-      //     scope,
-      //   })
-      // } catch (err) {
-      //   token = await getAccessTokenWithPopup({
-      //     audience,
-      //     scope,
-      //     display: "wap",
-      //   })
-      // }
-      return await (
-        await fetch(`${process.env.GATSBY_API_URL}/forms`, {
-          headers: {
-            // Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        })
-      ).json()
+      const response = await fetch(`${process.env.GATSBY_API_URL}/forms`, {
+        headers: {
+          Authorization: `Bearer ${user.accessToken}`,
+          "Content-Type": "application/json",
+        },
+      })
+      if (response.status !== 200) {
+        throw response.statusText
+      }
+      return await response.json()
     }
   )
   if (isLoading) {
@@ -101,9 +93,9 @@ const Forms: React.FC = () => {
                 </tr>
               </thead>
               <tbody className="overflow-y-scroll">
-                {data.map((form, formIdx) => (
+                {data.forms?.map((form, formIdx) => (
                   <tr
-                    key={form._id}
+                    key={form.id}
                     className={formIdx % 2 === 0 ? "bg-white" : "bg-gray-50"}
                   >
                     <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
