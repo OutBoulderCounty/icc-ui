@@ -1,6 +1,5 @@
 import React from "react"
 import Button from "./button"
-import { StaticImage } from "gatsby-plugin-image"
 
 const aboutData = [
   {
@@ -119,11 +118,13 @@ export default function About() {
           Care, with love.
         </h2>
         <div className="invisible sm:visible w-12 h-2 bg-white mb-0 sm:mb-5"></div>
+
+        {/* About Cards */}
         <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12 pb-10 relative z-10">
           {aboutData.map((card, index) => (
             <div key={index}>
               <dt>
-                <div className="flex items-center justify-center h-20 w-20 rounded-md text-white">
+                <div className="flex items-center justify-center h-10 w-10 lg:h-20 lg:w-20 rounded-md text-white">
                   {card.icon}
                 </div>
                 <p className="mt-5 text-lg leading-6 font-medium text-white font-semibold">
@@ -136,9 +137,11 @@ export default function About() {
             </div>
           ))}
         </dl>
+
         <Button color={"transparent"} className="relative z-10">
           Our Mission
         </Button>
+
       </div>
     </div>
   )
