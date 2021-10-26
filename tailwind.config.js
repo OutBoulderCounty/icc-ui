@@ -13,6 +13,10 @@ module.exports = {
         },
       },
     },
+    backgroundSize: {
+      '10%': '10%',
+      '20%': '20%',
+    },
   },
   variants: {
     extend: {},
