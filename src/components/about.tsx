@@ -41,10 +41,10 @@ const aboutData = [
 
 export default function About() {
   return (
-    <div className="py-12 bg-transparent">
-      <div className="max-w-full mx-auto p-10 rounded xl:max-w-5xl lg:max-w-3xl lg:p-10 md:max-w-3xl sm:max-w-full sm:px-6 bg-violet">
-        <h2 className="text-5xl font-semibold text-white tracking-wider">Care, with love.</h2>
-        <dl className="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+    <div className="bg-transparent sm:transform sm:-translate-y-10">
+      <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 sm:rounded bg-violet">
+        <h2 className="text-3xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-10">Care, with love.</h2>
+        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
           {aboutData.map((card, index) => (
             <div key={index}>
               <dt>
