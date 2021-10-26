@@ -75,7 +75,7 @@ export default function About() {
   return (
     <div className="bg-transparent sm:transform sm:-translate-y-10">
       <div className="relative overflow-hidden max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet">
-        <div className="absolute w-full h-full top-0 left-0 bg-contain bg-right-bottom-hidden bg-no-repeat bg-500px filter blur z-0" style={{ backgroundImage: "url('/icons/icon-384x384.png')" }}></div>
+        <div className="absolute w-full h-full top-0 left-0 bg-contain bg-right-bottom-hidden bg-no-repeat filter blur z-0" style={{ backgroundImage: "url('/icons/icon-256x256.png')" }}></div>
         <h2 className="text-4xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-5">
           Care, with love.
         </h2>
@@ -97,7 +97,7 @@ export default function About() {
             </div>
           ))}
         </dl>
-        <Button color={"transparent"}>Our Mission</Button>
+        <Button color={"transparent"} className="relative z-10">Our Mission</Button>
       </div>
     </div>
   )
