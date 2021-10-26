@@ -74,12 +74,13 @@ const aboutData = [
 export default function About() {
   return (
     <div className="bg-transparent sm:transform sm:-translate-y-10">
-      <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet bg-contain bg-right-bottom-hidden bg-no-repeat bg-20%" style={{backgroundImage: "url('/icons/icon-384x384.png')"}}>
+      <div className="relative overflow-hidden max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet">
+        <div className="absolute w-full h-full top-0 left-0 bg-contain bg-right-bottom-hidden bg-no-repeat bg-500px filter blur z-0" style={{ backgroundImage: "url('/icons/icon-384x384.png')" }}></div>
         <h2 className="text-4xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-5">
           Care, with love.
         </h2>
         <div className="invisible sm:visible w-12 h-2 bg-white mb-0 sm:mb-5"></div>
-        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12 sm:pb-10">
+        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12 sm:pb-10 relative z-10">
           {aboutData.map((card, index) => (
             <div key={index}>
               <dt>
