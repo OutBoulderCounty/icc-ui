@@ -74,7 +74,7 @@ const aboutData = [
 export default function About() {
   return (
     <div className="bg-transparent sm:transform sm:-translate-y-10">
-      <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet bg-contain bg-right-bottom bg-no-repeat bg-20%" style={{backgroundImage: "url('/icons/icon-384x384.png')"}}>
+      <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet bg-contain bg-right-bottom-hidden bg-no-repeat bg-20%" style={{backgroundImage: "url('/icons/icon-384x384.png')"}}>
         <h2 className="text-4xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-5">
           Care, with love.
         </h2>
