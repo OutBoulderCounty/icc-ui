@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from './button'
 
 
 const aboutData = [
@@ -43,7 +44,8 @@ export default function About() {
   return (
     <div className="bg-transparent sm:transform sm:-translate-y-10">
       <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 sm:rounded bg-violet">
-        <h2 className="text-3xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-10">Care, with love.</h2>
+        <h2 className="text-3xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-5">Care, with love.</h2>
+        <div className="invisible sm:visible w-12 h-2 bg-white mb-0 sm:mb-5"></div>
         <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
           {aboutData.map((card, index) => (
             <div key={index}>
@@ -59,6 +61,7 @@ export default function About() {
             </div>
           ))}
         </dl>
+        <Button color={'transparent'}>Our Mission</Button>
       </div>
     </div>
   )
