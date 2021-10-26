@@ -80,7 +80,7 @@ export default function About() {
           Care, with love.
         </h2>
         <div className="invisible sm:visible w-12 h-2 bg-white mb-0 sm:mb-5"></div>
-        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12 sm:pb-10 relative z-10">
+        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12 pb-10 relative z-10">
           {aboutData.map((card, index) => (
             <div key={index}>
               <dt>
