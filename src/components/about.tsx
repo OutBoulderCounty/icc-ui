@@ -43,19 +43,19 @@ const aboutData = [
 export default function About() {
   return (
     <div className="bg-transparent sm:transform sm:-translate-y-10">
-      <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 sm:rounded bg-violet">
-        <h2 className="text-3xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-5">Care, with love.</h2>
+      <div className="max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet">
+        <h2 className="text-4xl pb-1 font-semibold text-white tracking-wider sm:text-5xl sm:pb-5">Care, with love.</h2>
         <div className="invisible sm:visible w-12 h-2 bg-white mb-0 sm:mb-5"></div>
-        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
+        <dl className="space-y-10 p-1 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-12 sm:pb-10">
           {aboutData.map((card, index) => (
             <div key={index}>
               <dt>
-                <div className="flex items-center justify-center h-12 w-12 rounded-md text-white">
+                <div className="flex items-center justify-center h-10 w-10 rounded-md text-white">
                   {card.icon}
                 </div>
-                <p className="mt-5 text-lg leading-6 font-medium text-white">{card.title}</p>
+                <p className="mt-5 text-lg leading-6 font-medium text-white font-semibold">{card.title}</p>
               </dt>
-              <dd className="mt-2 text-base text-white">
+              <dd className="mt-2 text-base text-white font-light">
                 {card.content}
               </dd>
             </div>
