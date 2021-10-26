@@ -138,7 +138,7 @@ export default function About() {
           ))}
         </dl>
 
-        <Button color={"transparent"} className="relative z-10">
+        <Button color={"transparent-dark"} className="relative z-10">
           Our Mission
         </Button>
 
