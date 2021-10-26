@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 import Button from "../components/button"
 
 import "../styles/global.css"
+import About from "../components/about"
 
 const navigation = [
   { name: "About Us", href: "#", current: false },
@@ -132,6 +133,7 @@ const IndexPage = () => (
           </div>
           {/* /End replace */}
         </div>
+        <About />
       </main>
     </div>
   </>
