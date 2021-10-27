@@ -7,8 +7,11 @@ const aboutData = [
     content:
       "A resource informed, built, and utilized  by our LGBTQ+ communities.",
     icon: (
+    //   <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+    //   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+    // </svg>
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 lg:h-20 lg:w-20"
         x="0px"
         y="0px"
         viewBox="0 0 172 172"
@@ -42,7 +45,7 @@ const aboutData = [
       "Providers share their experience so you know in advance. We believe that a willingness to treat our communities is not the same as competency.",
     icon: (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 lg:h-20 lg:w-20"
         x="0px"
         y="0px"
         viewBox="0 0 172 172"
@@ -76,7 +79,7 @@ const aboutData = [
       " Everything we see, you’ll see; we believe every bit of information helps create accessibility.",
     icon: (
       <svg
-        xmlns="http://www.w3.org/2000/svg"
+        className="h-10 w-10 lg:h-20 lg:w-20"
         x="0px"
         y="0px"
         viewBox="0 0 172 172"
