@@ -6,7 +6,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 import Seo from "../components/seo"
 import Button from "../components/button"
-
+import Footer from "../components/footer"
 import "../styles/global.css"
 
 const navigation = [
@@ -133,6 +133,7 @@ const IndexPage = () => (
           {/* /End replace */}
         </div>
       </main>
+      <Footer />
     </div>
   </>
 )
