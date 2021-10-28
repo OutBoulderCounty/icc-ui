@@ -24,7 +24,6 @@ const IndexPage = () => (
             <StaticImage
               src="../images/header_image.jpg"
               alt="Pride balloons on a car"
-              className="w-screen"
             />
             <div className="absolute inset-8">
               <h1 className="text-white text-4xl lg:text-7xl">
