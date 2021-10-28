@@ -22,7 +22,7 @@ const IndexPage = () => (
           {/* Replace with your content */}
           <div className="m:px-0 relative">
             <StaticImage
-              src="../images/header_image.jpghome"
+              src="../images/header_image.jpg"
               alt="Pride balloons on a car"
               className="w-screen"
             />
