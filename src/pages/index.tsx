@@ -18,13 +18,13 @@ const IndexPage = () => (
     <Header />
 
       <main>
-        <div className="max-w-7xl mx-auto overflow-x-hidden">
+        <div className="max-w-7xl mx-auto overflow-x-hidden min-h-275">
           {/* Replace with your content */}
           <div className="m:px-0 relative">
             <StaticImage
               src="../images/header_image.jpg"
               alt="Pride balloons on a car"
-              className="w-full"
+              className="w-full min-h-275"
               quality={100}
             />
             <div className="absolute inset-8">
