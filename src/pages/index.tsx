@@ -8,6 +8,7 @@ import Seo from "../components/seo"
 import Button from "../components/button"
 import Footer from "../components/footer"
 import "../styles/global.css"
+import About from "../components/about"
 import Header from "../components/header"
 
 const IndexPage = () => (
@@ -41,6 +42,7 @@ const IndexPage = () => (
           </div>
           {/* /End replace */}
         </div>
+        <About />
       </main>
       <Footer />
     </div>
