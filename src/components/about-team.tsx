@@ -66,8 +66,7 @@ function AboutTeam() {
           <div className="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
             <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl">The People</h2>
             <p className="text-xl text-gray-500">
-              Risus velit condimentum vitae tincidunt tincidunt. Mauris ridiculus fusce amet urna nunc. Ut nisl ornare
-              diam in.
+            This project would not have been possible without a dedicated team willing to take on the challenge. The countless hours volunteered are donated knowing that this revolutionary resource will save the lives of our community. Our hope is that this site will continue to grow and improve the lives of our LGBTQ+ peers, every person on this list showcased their desire for a more equitable future in healthcare through their commitment. 
             </p>
           </div>
           <ul
