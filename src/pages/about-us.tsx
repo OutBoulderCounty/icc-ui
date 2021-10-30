@@ -22,11 +22,10 @@ const AboutUs = () => (
         <div className="relative bg-indigo-100">
           <div className="absolute inset-0">
             <StaticImage
-              src="../images/pride_balloons.jpeg"
+              src="../images/garden_party-bw.jpeg"
               alt="Pride balloons on a car"
               className="w-full h-full object-cover"
             />
-            {/* Looks best on b&w image -- try to find one to make b&w */}
             <div
               className="absolute inset-0 bg-violet mix-blend-multiply"
               aria-hidden="true"
