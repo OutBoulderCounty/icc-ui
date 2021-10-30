@@ -21,7 +21,7 @@ const AboutUs = () => (
           <div className="absolute inset-0">
             <StaticImage
               src="../images/garden_party-bw.jpeg"
-              alt="Pride balloons on a car"
+              alt="garden party"
               className="w-full h-full object-cover"
             />
             <div
