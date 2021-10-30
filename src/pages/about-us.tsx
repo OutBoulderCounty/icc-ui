@@ -10,6 +10,7 @@ import "../styles/global.css"
 import Header from "../components/header"
 import AboutStory from "../components/about-story"
 import AboutTeam from "../components/about-team"
+import AboutThanks from "../components/about-thanks"
 
 const AboutUs = () => (
   <>
@@ -41,9 +42,10 @@ const AboutUs = () => (
           </div>
         </div>
 
-        <AboutStory />
 
+        <AboutStory />
         <AboutTeam />
+        <AboutThanks />
       </main>
       <Footer />
     </div>
