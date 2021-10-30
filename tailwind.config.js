@@ -13,6 +13,10 @@ module.exports = {
         },
       },
     },
+    minHeight: {
+      "200": "200px",
+      "300": "300px",
+    },
     backgroundSize: {
       '10%': '10%',
       '20%': '20%',
