@@ -1,22 +1,8 @@
 import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-function Image({ person }) {
-  const query = useStaticQuery(graphql`
-    query {
-      allFile {
-        nodes {
-          relativePath
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-    }
-  `)
-
-  const imageNode = query.allFile.nodes.find(
+function Image({ person, data }) {
+  const imageNode = data.allFile.nodes.find(
     node => node.relativePath === person.relativePath
   )
   const image = getImage(imageNode.childImageSharp.gatsbyImageData)

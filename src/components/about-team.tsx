@@ -1,5 +1,6 @@
 import React from "react"
 import Image from "./dynamic-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 const people = [
   {
@@ -51,6 +52,20 @@ const people = [
 ]
 
 function AboutTeam() {
+
+  const query = useStaticQuery(graphql`
+  query {
+    allFile {
+      nodes {
+        relativePath
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`)
+
   return (
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24 bg-violet xl:rounded">
@@ -79,7 +94,7 @@ function AboutTeam() {
                 className="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
               >
                 <div className="space-y-4 p-3">
-                  <Image person={person} />
+                  <Image person={person} data={query}/>
                   <div className="space-y-2">
                     <div className="text-xs font-normal lg:text-sm">
                       <h3>{person.name}</h3>
