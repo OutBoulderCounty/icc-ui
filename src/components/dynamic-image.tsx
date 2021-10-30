@@ -5,7 +5,7 @@ function Image({ person, data }) {
   const imageNode = data.allFile.nodes.find(
     node => node.relativePath === person.relativePath
   )
-  const image = getImage(imageNode.childImageSharp.gatsbyImageData)
+  const image = getImage(imageNode?.childImageSharp.gatsbyImageData)
 
   return (
     <GatsbyImage
