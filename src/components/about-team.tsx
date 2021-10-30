@@ -80,7 +80,7 @@ function AboutTeam() {
                   <div className="space-y-2">
                     <div className="text-xs font-normal lg:text-sm">
                       <h3>{person.name}</h3>
-                      <p className="text-gray-800 font-semibold">{person.role}</p>
+                      <p className="text-gray-900 font-semibold">{person.role}</p>
                     </div>
                   </div>
                 </div>
