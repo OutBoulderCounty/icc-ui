@@ -6,47 +6,47 @@ const people = [
   {
     name: "Clark Winters (he/him)",
     role: "tech lead and developer",
-    relativePath: "test1.jpeg",
+    relativePath: "team-photos/test1.jpeg",
   },
   {
     name: "Josie Nixon (all pronouns)",
     role: "project lead",
-    relativePath: "test2.jpeg",
+    relativePath: "team-photos/test2.jpeg",
   },
   {
     name: "Michal Duffy (they/them)",
     role: "program manager",
-    relativePath: "test1.jpeg",
+    relativePath: "team-photos/test1.jpeg",
   },
   {
     name: "Amy Onwudinanti (she/her)",
     role: "full stack intern",
-    relativePath: "test2.jpeg",
+    relativePath: "team-photos/test2.jpeg",
   },
   {
     name: "Raye Watson (they/them)",
     role: "front end developer",
-    relativePath: "test1.jpeg",
+    relativePath: "team-photos/test1.jpeg",
   },
   {
     name: "Daniel Park (he/him)",
     role: "full stack developer",
-    relativePath: "test1.jpeg",
+    relativePath: "team-photos/test1.jpeg",
   },
   {
     name: "Martin Carpoi (he/him)",
     role: "UI/UX developer",
-    relativePath: "test2.jpeg",
+    relativePath: "team-photos/test2.jpeg",
   },
   {
     name: "Kenneth Donahue (he/him)",
     role: "front end developer",
-    relativePath: "test1.jpeg",
+    relativePath: "team-photos/kenneth-donahue.jpg",
   },
   {
     name: "Carmen Lyons (she/her)",
     role: "Americorp Volunteer",
-    relativePath: "test1.jpeg",
+    relativePath: "team-photos/test1.jpeg",
   },
   // More people...
 ]
