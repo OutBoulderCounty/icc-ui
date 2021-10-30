@@ -8,10 +8,10 @@ function AboutStory() {
         <div className="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
           <div>
             <h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
-              Case Study
+              Story
             </h2>
             <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              Meet Whitney
+              Why ICC Started
             </h3>
           </div>
         </div>
@@ -61,77 +61,36 @@ function AboutStory() {
                     height="1376"
                   />
                 </div>
-                <figcaption className="mt-3 flex text-sm text-gray-500">
-                  {/* <!-- Heroicon name: solid/camera --> */}
-                  <svg
-                    className="flex-none w-5 h-5 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <span className="ml-2">Photograph by Marcus O’Leary</span>
-                </figcaption>
               </figure>
             </div>
           </div>
           <div className="mt-8 lg:mt-0">
             <div className="text-base max-w-prose mx-auto lg:max-w-none">
               <p className="text-lg text-gray-500">
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
+              For years Out Boulder County has been working to address our community’s need for inclusive health care. As our capacity for support grows so does our desire to create the change we want to see within Colorado.
               </p>
             </div>
             <div className="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1">
               <p>
-                Sollicitudin tristique eros erat odio sed vitae, consequat
-                turpis elementum. Lorem nibh vel, eget pretium arcu vitae. Eros
-                eu viverra donec ut volutpat donec laoreet quam urna.
+              Our communities are struggling daily to find health care they feel safe in. The disparities in equitable care for LGBTQ+ people is striking, creating perpetual issues in access and quality of care. With less access comes less opportunity for living a full life as our authentic selves.
               </p>
               <p>
-                Bibendum eu nulla feugiat justo, elit adipiscing. Ut tristique
-                sit nisi lorem pulvinar. Urna, laoreet fusce nibh leo. Dictum et
-                et et sit. Faucibus sed non gravida lectus dignissim imperdiet
-                a.
+              Several years ago we began our project with the completion of Trans Health Boulder County, a collection of providers that had been vetted and found competent to successfully care for our trans community.
               </p>
               <p>
-                Dictum magnis risus phasellus vitae quam morbi. Quis lorem lorem
-                arcu, metus, egestas netus cursus. In.
+              This foundational resource was our first step to Inclusive Care Colorado, as we grow this network to include all of our LGBTQ+ identities.
               </p>
+              <p>
+              Through our:
+              </p>
+              <h3>Vetting Process</h3>
               <ul role="list">
-                <li>Quis elit egestas venenatis mattis dignissim.</li>
+                <li>Health care providers complete a thorough questionnaire to inform potential patients about their experience with LGBTQ communities, relevant training, and inclusive practices.</li>
                 <li>
-                  Cras cras lobortis vitae vivamus ultricies facilisis tempus.
+                Provider questionnaires are reviewed by staff and published to the site.
                 </li>
-                <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+                <li>Reviews from community members will be added soon to share patient experiences.</li>
               </ul>
-              <p>
-                Rhoncus nisl, libero egestas diam fermentum dui. At quis
-                tincidunt vel ultricies. Vulputate aliquet velit faucibus
-                semper. Pellentesque in venenatis vestibulum consectetur nibh
-                id. In id ut tempus egestas. Enim sit aliquam nec, a. Morbi enim
-                fermentum lacus in. Viverra.
-              </p>
-              <h3>How we helped</h3>
-              <p>
-                Tincidunt integer commodo, cursus etiam aliquam neque, et.
-                Consectetur pretium in volutpat, diam. Montes, magna cursus
-                nulla feugiat dignissim id lobortis amet. Laoreet sem est
-                phasellus eu proin massa, lectus. Diam rutrum posuere donec
-                ultricies non morbi. Mi a platea auctor mi.
-              </p>
-              <p>
-                Sagittis scelerisque nulla cursus in enim consectetur quam.
-                Dictum urna sed consectetur neque tristique pellentesque.
-                Blandit amet, sed aenean erat arcu morbi.
-              </p>
             </div>
           </div>
         </div>
