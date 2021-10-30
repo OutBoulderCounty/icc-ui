@@ -1,16 +1,14 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Disclosure, Menu, Transition } from "@headlessui/react"
-import { MenuIcon, XIcon } from "@heroicons/react/outline"
 
 import Seo from "../components/seo"
-import Footer from "../components/footer"
-import "../styles/global.css"
 import Header from "../components/header"
+import Footer from "../components/footer"
 import AboutStory from "../components/about-story"
 import AboutTeam from "../components/about-team"
 import AboutThanks from "../components/about-thanks"
+
+import "../styles/global.css"
 
 const AboutUs = () => (
   <>
