@@ -86,7 +86,6 @@ function AboutTeam() {
             </p>
           </div>
 
-
           <ul
             role="list"
             className="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-3 md:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
@@ -96,8 +95,10 @@ function AboutTeam() {
                 key={person.name}
                 className="col-span-1 flex flex-col text-center bg-white rounded-lg shadow divide-y divide-gray-200"
               >
+
                 <div className="space-y-4 p-3">
-                  <ImageHolder data={person} query={query}/>
+                  <ImageHolder path={person.relativePath} query={query}/>
+
                   <div className="space-y-2">
                     <div className="text-xs font-normal lg:text-sm">
                       <h3>{person.name}</h3>
@@ -107,10 +108,10 @@ function AboutTeam() {
                     </div>
                   </div>
                 </div>
+
               </li>
             ))}
           </ul>
-
 
         </div>
       </div>
@@ -119,8 +120,8 @@ function AboutTeam() {
 }
 
 
-function ImageHolder({data, query}) {
-  const imageNode = query.allFile.nodes.find(node => node.relativePath === data.relativePath)
+function ImageHolder({path, query}) {
+  const imageNode = query.allFile.nodes.find(node => node.relativePath === path)
 
   return (
     <div className="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24 overflow-hidden">

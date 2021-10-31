@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 function Image({ data }) {
 
   const image = getImage(data)
+  
   return (
     <GatsbyImage
       image={image}
