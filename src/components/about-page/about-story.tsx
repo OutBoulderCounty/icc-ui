@@ -22,7 +22,7 @@ function AboutStory() {
               <figure>
                 <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
                   <StaticImage
-                    src="../images/vaccine_clinic-narrow.jpeg"
+                    src="../../images/vaccine_clinic-narrow.jpeg"
                     alt=""
                     className="rounded-lg shadow-lg object-cover object-center"
                     width={1184}
