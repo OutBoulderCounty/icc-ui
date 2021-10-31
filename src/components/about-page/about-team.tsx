@@ -125,7 +125,7 @@ function ImageHolder({path, query}) {
 
   return (
     <div className="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24 overflow-hidden">
-      <Image data={imageNode}/>
+      <Image imageFile={imageNode}/>
     </div>
   )
 }

@@ -1,14 +1,14 @@
 import React from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
-function Image({ data }) {
+function Image({ imageFile }) {
 
-  const image = getImage(data)
-  
+  const image = getImage(imageFile)
+
   return (
     <GatsbyImage
       image={image}
-      alt={data.id}
+      alt={imageFile.id}
       className="h-full w-full"
     />
   )
