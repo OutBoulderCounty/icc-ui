@@ -55,7 +55,7 @@ function AboutTeam() {
 
   const query = useStaticQuery(graphql`
   query {
-    allFile {
+    allFile (filter:{relativePath: {regex: "/team-photos/"}}) {
       nodes {
         relativePath
         childImageSharp {
