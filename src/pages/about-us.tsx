@@ -4,9 +4,9 @@ import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
 import Header from "../components/header"
 import Footer from "../components/footer"
-import AboutStory from "../components/about-story"
-import AboutTeam from "../components/about-team"
-import AboutThanks from "../components/about-thanks"
+import AboutStory from "../components/about-page/about-story"
+import AboutTeam from "../components/about-page/about-team"
+import AboutThanks from "../components/about-page/about-thanks"
 
 import "../styles/global.css"
 
