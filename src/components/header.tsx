@@ -3,11 +3,12 @@ import { StaticImage } from "gatsby-plugin-image"
 import { Disclosure} from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
 import Button from "../components/button"
+import {Link} from 'gatsby'
 
 const navigation = [
   { name: "About Us", href: "#", current: false },
   { name: "Research", href: "#", current: false },
-  { name: "Get Involved", href: "#", current: false },
+  { name: "Get Involved", href: "/getinvolved", current: false },
 ]
 
 function classNames(...classes) {
@@ -38,9 +39,9 @@ const Header = () => {
                   </div>
                   <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                     {navigation.map(item => (
-                      <a
+                      <Link 
                         key={item.name}
-                        href={item.href}
+                        to={item.href}
                         className={classNames(
                           item.current
                             ? "border-indigo-500 text-gray-900"
@@ -50,7 +51,7 @@ const Header = () => {
                         aria-current={item.current ? "page" : undefined}
                       >
                         {item.name}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>
@@ -80,9 +81,9 @@ const Header = () => {
             <Disclosure.Panel className="sm:hidden">
               <div className="pt-2 pb-3 space-y-1 border-t">
                 {navigation.map(item => (
-                  <a
+                  <Link
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
                     className={classNames(
                       item.current
                         ? "bg-indigo-50 border-indigo-500 text-indigo-700"
@@ -92,7 +93,7 @@ const Header = () => {
                     aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </Disclosure.Panel>
