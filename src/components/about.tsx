@@ -111,7 +111,7 @@ const aboutData = [
 
 export default function About() {
   return (
-    <div className="bg-transparent sm:transform sm:-translate-y-10">
+    <div className="bg-transparent md:transform md:-translate-y-10">
       <div className="relative overflow-hidden max-w-full mx-auto p-4 xl:max-w-5xl lg:max-w-3xl md:max-w-2xl sm:max-w-full sm:p-10 xl:px-20 sm:rounded bg-violet">
         <div
           className="absolute w-full h-full top-0 left-0 bg-contain bg-right-bottom-hidden bg-no-repeat filter blur z-0"
