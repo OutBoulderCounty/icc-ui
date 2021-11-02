@@ -20,13 +20,13 @@ function AboutStory() {
           <div className="relative lg:row-start-1 lg:col-start-2">
             <div className="relative text-base mx-auto max-w-prose lg:max-w-none">
               <figure>
-                <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
+                <div className="aspect-w-12 aspect-h-7 lg:aspect-none pb-0">
                   <StaticImage
                     src="../../images/vaccine_clinic-narrow.jpeg"
                     alt=""
                     className="rounded-lg shadow-lg object-cover object-center"
-                    width={1184}
-                    height={1376}
+                    // width={1184}
+                    // height={1376}
                   />
                 </div>
               </figure>
