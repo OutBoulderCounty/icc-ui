@@ -7,13 +7,14 @@ import {
   Switch,
   Route,
   Link as RouterLink,
+  useHistory,
 } from "react-router-dom"
 import { QueryClient, QueryClientProvider } from "react-query"
-import { AuthorizedContent, useAuthUser } from "@frontegg/react"
+import { AuthorizedContent, useAuthUser, useAuthActions } from "@frontegg/react"
 
 import Button from "../button"
 import Error from "../error"
-import NavBar, { navItem } from "../navBar"
+import NavBar, { navItem } from "./navBar"
 import Forms from "./forms"
 
 const navigation: navItem[] = [
@@ -50,6 +51,8 @@ const queryClient = new QueryClient()
 const Dashboard: React.FC = () => {
   const [sidebarOpen, setSidebarOpen] = React.useState(false)
   const user = useAuthUser()
+  const { logout } = useAuthActions()
+  const history = useHistory()
 
   return (
     <>
@@ -60,9 +63,14 @@ const Dashboard: React.FC = () => {
           go home
         </Link>{" "}
         or{" "}
-        <Link className="underline" to="/account/logout">
+        <a
+          className="underline"
+          onClick={() => {
+            logout(() => history.push("/"))
+          }}
+        >
           log out
-        </Link>
+        </a>
         .
       </p>
       <AuthorizedContent requiredRoles={["Admin"]}>

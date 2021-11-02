@@ -1,9 +1,10 @@
 import * as React from "react"
 import { Disclosure } from "@headlessui/react"
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import { Link, useLocation } from "react-router-dom"
+import { Link, useLocation, useHistory } from "react-router-dom"
+import { useAuthActions } from "@frontegg/react"
 
-import Button from "./button"
+import Button from "../button"
 
 type IconProps = {
   className?: string
@@ -47,6 +48,8 @@ const NavItem: React.FC<navItem> = item => {
 }
 
 const NavBar: React.FC<navOptions> = ({ items }) => {
+  const { logout } = useAuthActions()
+  const history = useHistory()
   return (
     <Disclosure as="nav" className="bg-white shadow max-h-max">
       {({ open }) => (
@@ -80,9 +83,12 @@ const NavBar: React.FC<navOptions> = ({ items }) => {
               </div>
               <div className="flex items-center">
                 <div className="flex-shrink-0">
-                  <Link to="/account/logout">
-                    <Button color="violet">Logout</Button>
-                  </Link>
+                  <Button
+                    color="violet"
+                    onClick={() => logout(() => history.push("/"))}
+                  >
+                    Logout
+                  </Button>
                 </div>
               </div>
             </div>

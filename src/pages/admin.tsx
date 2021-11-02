@@ -6,10 +6,6 @@ import Error from "../components/error"
 import Dashboard from "../components/admin/dashboard"
 import Seo from "../components/seo"
 
-const contextOptions = {
-  baseUrl: "https://icc.frontegg.com",
-}
-
 const Admin: React.FC = () => {
   return (
     <>
@@ -17,7 +13,14 @@ const Admin: React.FC = () => {
       <FronteggProvider
         contextOptions={{
           baseUrl: "https://icc.frontegg.com",
-          // urlPrefix: "/admin",
+        }}
+        authOptions={{
+          routes: {
+            loginUrl: "/admin/account/login",
+            logoutUrl: "/admin/account/logout",
+            socialLoginCallbackUrl: "/admin/account/social/success",
+            authenticatedUrl: "/admin",
+          },
         }}
       >
         <Dashboard />
