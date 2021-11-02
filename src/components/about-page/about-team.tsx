@@ -30,7 +30,7 @@ const people = [
   },
   {
     name: "Daniel Park (he/him)",
-    role: "full stack developer",
+    role: "front end developer",
     relativePath: "team-photos/test2.jpeg",
   },
   {
