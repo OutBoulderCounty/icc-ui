@@ -6,12 +6,12 @@ const people = [
   {
     name: "Clark Winters (he/him)",
     role: "tech lead and developer",
-    relativePath: "team-photos/test1.jpeg",
+    relativePath: "team-photos/clark-winters.png",
   },
   {
     name: "Josie Nixon (all pronouns)",
     role: "project lead",
-    relativePath: "team-photos/test1.jpeg",
+    relativePath: "team-photos/josie-nixon.jpg",
   },
   {
     name: "Michal Duffy (they/them)",
@@ -26,15 +26,15 @@ const people = [
   {
     name: "Raye Watson (they/them)",
     role: "front end developer",
-    relativePath: "team-photos/test2.jpeg",
+    relativePath: "team-photos/raye-watson.jpg",
   },
   {
     name: "Daniel Park (he/him)",
     role: "front end developer",
-    relativePath: "team-photos/test2.jpeg",
+    relativePath: "team-photos/daniel-park.jpeg",
   },
   {
-    name: "Martin Carpoi (he/him)",
+    name: "Martin Carpio (he/him)",
     role: "UI/UX developer",
     relativePath: "team-photos/test2.jpeg",
   },
@@ -46,7 +46,7 @@ const people = [
   {
     name: "Carmen Lyons (she/her)",
     role: "Americorp Volunteer",
-    relativePath: "team-photos/test2.jpeg",
+    relativePath: "team-photos/carmen-lyons.jpg",
   },
   // More people...
 ]
