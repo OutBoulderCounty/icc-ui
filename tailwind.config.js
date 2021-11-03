@@ -16,6 +16,8 @@ module.exports = {
     minHeight: {
       "200": "200px",
       "300": "300px",
+      '275': '275px',
+
     },
     backgroundSize: {
       '10%': '10%',
