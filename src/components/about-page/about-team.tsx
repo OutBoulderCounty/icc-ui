@@ -16,7 +16,7 @@ const people = [
   {
     name: "Michal Duffy (they/them)",
     role: "program manager",
-    relativePath: "team-photos/placeholder.jpeg",
+    relativePath: "team-photos/michal-duffy.jpg",
   },
   {
     name: "Amy Onwudinanti (she/her)",
