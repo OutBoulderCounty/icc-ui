@@ -6,8 +6,8 @@ import Button from "../components/button"
 import {Link} from 'gatsby'
 
 const navigation = [
-  { name: "About Us", href: "#", current: false },
-  { name: "Research", href: "#", current: false },
+  { name: "About Us", href: "/about-us", current: false },
+  // { name: "Research", href: "#", current: false },
   { name: "Get Involved", href: "/getinvolved", current: false },
 ]
 
@@ -24,18 +24,21 @@ const Header = () => {
               <div className="flex justify-between h-16">
                 <div className="flex">
                   <div className="flex-shrink-0 flex items-center">
-                    <StaticImage
-                      className="block lg:hidden w-auto"
-                      height={65}
-                      src="../images/color-vertical1x.png"
-                      alt="Inclusive Care Colorado"
-                    />
-                    <StaticImage
-                      className="hidden lg:block w-auto"
-                      height={50}
-                      src="../images/color-horizontal1x.png"
-                      alt="Inclusive Care Colorado"
-                    />
+                    <Link to="/">
+                      <StaticImage
+                        className="block lg:hidden w-auto"
+                        height={65}
+                        src="../images/color-vertical1x.png"
+                        alt="Inclusive Care Colorado"
+                      />
+                      <StaticImage
+                        className="hidden lg:block w-auto"
+                        height={50}
+                        src="../images/color-horizontal1x.png"
+                        alt="Inclusive Care Colorado"
+                      />                    
+                    </Link>
+
                   </div>
                   <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                     {navigation.map(item => (

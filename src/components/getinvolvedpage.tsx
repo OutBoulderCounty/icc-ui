@@ -76,23 +76,22 @@ const Getinvolvedpage = () => {
             leaveFrom="opacity-100 scale-100"
             leaveTo="opacity-0 scale-95"
           >
-
           </Transition>
         </Popover>
 
-        <div className="relative mt-24 max-w-md mx-auto px-4 sm:max-w-3xl sm:mt-32 sm:px-6 lg:max-w-7xl lg:px-8">
-          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Get Involved</h1>
-          <p className="mt-6 text-xl text-white  max-w-3xl">
-            Inclusive Care Colorado is a resource built by volunteers who realize the severe disparities in care that the LGBTQ+ community faces. If you’d like to volunteer your services in another way you think would benefit your community please contact icc@outboulder.org
+        <div className="relative bg-black bg-opacity-50 mt-24 max-w-md mx-auto px-4 sm:max-w-3xl sm:mt-32 sm:px-6 lg:max-w-7xl lg:px-8">
+          <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Volunteer</h1>
+          <p className="mt-6 text-xl text-white max-w-3xl">
+            Inclusive Care Colorado is a resource built by volunteers who realize the severe disparities in care that the LGBTQ+ community faces. If you’d like to volunteer your services in another way you think would benefit your community please contact <a className="text-violet-lightest font-medium underline hover:no-underline" href='mailto:icc@outboulder.org'>icc@outboulder.org</a>
           </p>
           <p className="mt-12 text-xl text-white max-w-3xl">
-            Are you aware of certified training programs for providers to further their LGBTQ+ competence? Please reach out to icc@outboulder.org to get it listed.
+            Are you aware of certified training programs for providers to further their LGBTQ+ competence? Please reach out to <a className="text-violet-lightest font-medium underline hover:no-underline"  href='mailto:icc@outboulder.org'>icc@outboulder.org</a> to get it listed.
           </p>
         </div>
       </header>
 
       <main>
-        {/* Side-by-side grid */}
+        {/* Side-by-side grid 
         <div className="bg-white">
           <div className="max-w-md mx-auto py-12 px-4 sm:max-w-3xl sm:py-13 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="divide-y divide-warm-gray-200">
@@ -120,9 +119,28 @@ const Getinvolvedpage = () => {
               </section>
             </div>
           </div>
-        </div>
+        </div>*/}
 
-        {/* FAQ */}
+       {/* DONATE SECITON */}
+      <div className="bg-violet">
+        <div className="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-extrabold text-white sm:text-4xl">
+            <span className="block">Please Donate</span>
+          </h2>
+          <p className="mt-4 text-lg leading-6 text-white">
+            100% of your donations to Inclusive Care Colorado go to maintaining and improving this resource. In order to keep this resource functional we need your support! If you found this to be helpful in finding care we encourage you to support its ability to help your peers. LGBTQ+ people face so many challenges when it comes to healthcare, together we’ll make finding the right practitioner the easiest part.
+          </p>
+          <a
+            href="#"
+            className="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-violet bg-white hover:bg-indigo-50 sm:w-auto"
+          >
+            Donate
+          </a>
+        </div>
+      </div>   
+
+
+        {/* FAQ
         <div className="bg-warm-gray-50">
           <div className="max-w-md mx-auto py-10 px-4 sm:max-w-3xl sm:py-32 sm:px-6 lg:max-w-7xl lg:px-8">
             <div className="lg:grid lg:grid-cols-3 lg:gap-8">
@@ -148,7 +166,8 @@ const Getinvolvedpage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+
       </main>
     </div>
   )
