@@ -16,12 +16,12 @@ const people = [
   {
     name: "Michal Duffy (they/them)",
     role: "program manager",
-    relativePath: "team-photos/test1.jpeg",
+    relativePath: "team-photos/placeholder.jpeg",
   },
   {
     name: "Amy Onwudinanti (she/her)",
     role: "full stack intern",
-    relativePath: "team-photos/test1.jpeg",
+    relativePath: "team-photos/placeholder.jpeg",
   },
   {
     name: "Raye Watson (they/them)",
@@ -36,7 +36,7 @@ const people = [
   {
     name: "Martin Carpio (he/him)",
     role: "UI/UX developer",
-    relativePath: "team-photos/test2.jpeg",
+    relativePath: "team-photos/martin-carpio.png",
   },
   {
     name: "Kenneth Donahue (he/him)",
