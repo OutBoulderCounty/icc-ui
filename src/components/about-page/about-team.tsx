@@ -21,7 +21,7 @@ const people = [
   {
     name: "Amy Onwudinanti (she/her)",
     role: "full stack intern",
-    relativePath: "team-photos/placeholder.jpeg",
+    relativePath: "team-photos/amy-onwudinanti.png",
   },
   {
     name: "Raye Watson (they/them)",
