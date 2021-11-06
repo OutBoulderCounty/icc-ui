@@ -12,7 +12,7 @@ import "../styles/global.css"
 
 const AboutUs = () => (
   <>
-    <Seo title="Home" />
+    <Seo title="About Us" />
     <div className="min-h-screen bg-white">
       <Header />
 
