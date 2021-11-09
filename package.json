@@ -8,6 +8,8 @@
     "@auth0/auth0-react": "^1.8.0",
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
+    "@tailwindcss/aspect-ratio": "^0.3.0",
+    "@tailwindcss/typography": "^0.4.1",
     "@types/react-helmet": "^6.1.4",
     "gatsby": "^3.14.2",
     "gatsby-plugin-gatsby-cloud": "^3.2.0",
