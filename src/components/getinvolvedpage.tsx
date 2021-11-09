@@ -62,7 +62,7 @@ const GetInvolvedPage = () => {
       </header>
 
        {/* DONATE SECTION */}
-      <div className="">
+      <div>
         <div className="max-w-2xl mx-auto text-center pt-16 px-4 sm:pt-20 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             <span className="block">Your Support is Appreciated</span>
@@ -82,7 +82,7 @@ const GetInvolvedPage = () => {
         {/* TRAINING SECTION */}
         <div className="mx-auto py-16 px-4 sm:py-20 text-center sm:px-6 lg:px-8 max-w-2xl">
           <h1 className="text-4xl font-extrabold tracking-tight text-center sm:text-5xl lg:text-6xl">Training</h1>
-          <p className="mt-12 text-xl text center">
+          <p className="mt-12 text-xl text-center">
             Are you aware of certified training programs for providers to further their LGBTQ+ competence? Please reach out to <a className="text-violet-lightest font-medium underline hover:no-underline"  href='mailto:icc@outboulder.org'>icc@outboulder.org</a> to get it listed.
           </p>
         </div>        
@@ -90,11 +90,12 @@ const GetInvolvedPage = () => {
         {/* VOLUNTEER SECTION */}
         <div className="mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8 text-center lg:max-w-7xl bg-violet">
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white text-center">Volunteer</h1>
-          <p className="mt-6 text-xl text-white text-center">
-            Inclusive Care Colorado is a resource built by volunteers who recognize the severe disparities in care that the LGBTQ+ community faces. If you’d like to volunteer your services to support your community please contact<a className="text-violet-lightest font-medium underline hover:no-underline" href='mailto:icc@outboulder.org'>icc@outboulder.org</a>
-          </p>
+          <div className="max-w-2xl mx-auto">
+            <p className="mt-6 text-xl text-white text-center">
+              Inclusive Care Colorado is a resource built by volunteers who recognize the severe disparities in care that the LGBTQ+ community faces. If you’d like to volunteer your services to support your community please contact <a className="text-white font-medium underline hover:no-underline" href='mailto:icc@outboulder.org'>icc@outboulder.org</a>
+            </p>            
+          </div>
         </div> 
-
       <main>
 
 
