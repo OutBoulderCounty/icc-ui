@@ -1,11 +1,13 @@
 import * as React from "react"
 
 import { CheckIcon } from "@heroicons/react/outline"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
 import Footer from "../components/footer"
 import "../styles/global.css"
 import Header from "../components/header"
+import Button from "../components/button"
 
 const IndexPage = () => (
   <>
@@ -14,6 +16,32 @@ const IndexPage = () => (
       <Header />
 
       <main>
+        <div className="relative max-w-7xl mx-auto bg-indigo-100 sm:min-h-200 min-h-300">
+          <div className="absolute inset-0">
+            <StaticImage
+              src="../images/garden_party-bw.jpeg"
+              alt="garden party"
+              className="w-full h-full object-cover"
+            />
+            <div
+              className="absolute inset-0 bg-violet-light mix-blend-multiply"
+              aria-hidden="true"
+            ></div>
+          </div>
+          <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
+            <div className="absolute inset-8">
+              <h1 className="text-white text-4xl lg:text-7xl">
+                Provider Sign Up
+              </h1>
+              <p className="mt-6 text-xl text-indigo-100 max-w-3xl">
+                Join a growing community of inclusive providers. Discover why
+                you should consider creating an account and find information on
+                filling out our Provider Questionnaire.
+              </p>
+            </div>
+          </div>
+        </div>
+
         <ProviderBenefits />
 
         <ProviderCTA />
@@ -31,28 +59,17 @@ const ProviderCTA = () => {
   return (
     <div className="bg-gray-50">
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
-        <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          <span className="block">Ready to join a growing list of inclusive providers?</span>
+        <h2 className="text-3xl font-semibold tracking-tight text-gray-900 sm:text-4xl">
+          <span className="block">
+            Ready to join a growing list of inclusive providers?
+          </span>
           <span className="block text-violet">
             Begin your provider account here!
           </span>
         </h2>
         <div className="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-          <div className="inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-violet hover:bg-violet-lightest"
-            >
-              Get started
-            </a>
-          </div>
           <div className="ml-3 inline-flex rounded-md shadow">
-            <a
-              href="#"
-              className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-violet bg-white hover:bg-violet-lightest"
-            >
-              Learn more
-            </a>
+            <Button color="violet">Get Started</Button>
           </div>
         </div>
       </div>
@@ -88,9 +105,7 @@ function ProviderBenefits() {
     <div className="bg-white">
       <div className="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-24 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8">
         <div>
-          <p className="mt-2 text-3xl font-extrabold text-gray-900">
-            Benefits
-          </p>
+          <p className="mt-2 text-3xl font-extrabold text-gray-900">Benefits</p>
           {/* <p className="mt-4 text-lg text-gray-500">
             Ac euismod vel sit maecenas id pellentesque eu sed consectetur.
             Malesuada adipiscing sagittis vel nulla nec.
@@ -121,148 +136,67 @@ function ProviderBenefits() {
   )
 }
 
-
 function ProviderHowItWorks() {
   return (
-<div className="relative py-16 bg-white overflow-hidden">
+    <div className="relative py-16 bg-white overflow-hidden">
       <div className="hidden lg:block lg:absolute lg:inset-y-0 lg:h-full lg:w-full">
-        <div className="relative h-full text-lg max-w-prose mx-auto" aria-hidden="true">
-          <svg
-            className="absolute top-12 left-full transform translate-x-32"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="74b3fd99-0a6f-4271-bef2-e80eeafdf357"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width={404} height={384} fill="url(#74b3fd99-0a6f-4271-bef2-e80eeafdf357)" />
-          </svg>
-          <svg
-            className="absolute top-1/2 right-full transform -translate-y-1/2 -translate-x-32"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="f210dbf6-a58d-4871-961e-36d5016a0f49"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width={404} height={384} fill="url(#f210dbf6-a58d-4871-961e-36d5016a0f49)" />
-          </svg>
-          <svg
-            className="absolute bottom-12 left-full transform translate-x-32"
-            width={404}
-            height={384}
-            fill="none"
-            viewBox="0 0 404 384"
-          >
-            <defs>
-              <pattern
-                id="d3eb07ae-5182-43e6-857d-35c643af9034"
-                x={0}
-                y={0}
-                width={20}
-                height={20}
-                patternUnits="userSpaceOnUse"
-              >
-                <rect x={0} y={0} width={4} height={4} className="text-gray-200" fill="currentColor" />
-              </pattern>
-            </defs>
-            <rect width={404} height={384} fill="url(#d3eb07ae-5182-43e6-857d-35c643af9034)" />
-          </svg>
-        </div>
+        <div
+          className="relative h-full text-lg max-w-prose mx-auto"
+          aria-hidden="true"
+        ></div>
       </div>
       <div className="relative px-4 sm:px-6 lg:px-8">
         <div className="text-lg max-w-prose mx-auto">
           <h1>
-            <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
+            {/* <span className="block text-base text-center text-indigo-600 font-semibold tracking-wide uppercase">
               Introducing
-            </span>
+            </span> */}
             <span className="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-              JavaScript for Beginners
+              How it Works
             </span>
           </h1>
           <p className="mt-8 text-xl text-gray-500 leading-8">
-            Aliquet nec orci mattis amet quisque ullamcorper neque, nibh sem. At arcu, sit dui mi, nibh dui, diam eget
-            aliquam. Quisque id at vitae feugiat egestas ac. Diam nulla orci at in viverra scelerisque eget. Eleifend
-            egestas fringilla sapien.
+            Get started by creating an account. Then you can fill out the
+            Provider Questionnaire, saving your progress as you go.
           </p>
         </div>
         <div className="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
           <p>
-            Faucibus commodo massa rhoncus, volutpat. <strong>Dignissim</strong> sed <strong>eget risus enim</strong>.
-            Mattis mauris semper sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra
-            tellus varius sit neque erat velit. Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim.{' '}
-            <a href="#">Mattis mauris semper</a> sed amet vitae sed turpis id.
+            The questionnaire will take around 15-30 minutes to complete and
+            includes questions about your:
           </p>
           <ul role="list">
-            <li>Quis elit egestas venenatis mattis dignissim.</li>
-            <li>Cras cras lobortis vitae vivamus ultricies facilisis tempus.</li>
-            <li>Orci in sit morbi dignissim metus diam arcu pretium.</li>
+            <li>experience working with LGBTQ individuals</li>
+            <li>training</li>
+            <li>health practices</li>
+            <li>facilities and staff</li>
           </ul>
           <p>
-            Quis semper vulputate aliquam venenatis egestas sagittis quisque orci. Donec commodo sit viverra aliquam
-            porttitor ultrices gravida eu. Tincidunt leo, elementum mattis elementum ut nisl, justo, amet, mattis. Nunc
-            purus, diam commodo tincidunt turpis. Amet, duis sed elit interdum dignissim.
-          </p>
-          <h2>From beginner to expert in 30 days</h2>
-          <p>
-            Id orci tellus laoreet id ac. Dolor, aenean leo, ac etiam consequat in. Convallis arcu ipsum urna nibh.
-            Pharetra, euismod vitae interdum mauris enim, consequat vulputate nibh. Maecenas pellentesque id sed tellus
-            mauris, ultrices mauris. Tincidunt enim cursus ridiculus mi. Pellentesque nam sed nullam sed diam turpis
-            ipsum eu a sed convallis diam.
-          </p>
-          <blockquote>
-            <p>
-              Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique
-              pellentesque. Blandit amet, sed aenean erat arcu morbi.
-            </p>
-          </blockquote>
-          <p>
-            Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-            sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
-          </p>
-          <figure>
-            <img
-              className="w-full rounded-lg"
-              src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&w=1310&h=873&q=80&facepad=3"
-              alt=""
-              width={1310}
-              height={873}
-            />
-            <figcaption>Sagittis scelerisque nulla cursus in enim consectetur quam.</figcaption>
-          </figure>
-          <h2>Everything you need to get up and running</h2>
-          <p>
-            Purus morbi dignissim senectus mattis <a href="#">adipiscing</a>. Amet, massa quam varius orci dapibus
-            volutpat cras. In amet eu ridiculus leo sodales cursus tristique. Tincidunt sed tempus ut viverra ridiculus
-            non molestie. Gravida quis fringilla amet eget dui tempor dignissim. Facilisis auctor venenatis varius nunc,
-            congue erat ac. Cras fermentum convallis quam.
+            Community focus groups informed the creation of the Provider
+            Questionnaire and prioritized the information most important to our
+            LGBTQ communities.
           </p>
           <p>
-            Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper sed amet vitae
-            sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra tellus varius sit neque erat velit.
+            Once you have completed the Provider Questionnaire, it will be
+            approved by a staff member and published for our community.
           </p>
+
+          {/*
+          <p>
+            Get started by creating an account. Then you can fill out the
+            Provider Questionnaire, saving your progress as you go. The
+            questionnaire will take around 15-30 minutes to complete and
+            includes questions about your experience working with LGBTQ
+            individuals, training, health practices, and facilities and staff.
+            Community focus groups informed the creation of the Provider
+            Questionnaire and prioritized the information most important to our
+            LGBTQ communities.
+          </p>
+          <p>
+            Once you have completed the Provider Questionnaire, it will be
+            approved by a staff member and published for our community.
+          </p>
+          */}
         </div>
       </div>
     </div>
