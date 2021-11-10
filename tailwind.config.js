@@ -11,6 +11,27 @@ module.exports = {
           light: "#803BB5",
           lightest: "#995AC9",
         },
+        red: {
+          DEFAULT: "#EB1F27"
+        },
+        orange: {
+          DEFAULT: "#F78D20"
+        },
+        yellow: {
+          DEFAULT: "#F6EB03"
+        },
+        green: {
+          DEFAULT: "#7CC243"
+        },
+        blue: {
+          DEFAULT: "#11AAE2"
+        },
+        brown: {
+          DEFAULT: "#766355"
+        },
+        black: {
+          DEFAULT: "#333333"
+        },
       },
     },
     minHeight: {
