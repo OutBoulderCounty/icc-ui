@@ -71,10 +71,10 @@ const Glossary = () => {
 
     {/* DISPLAY TERMS */}
     <div className="bg-white pt-2 pb-20 px-8 sm:px-6 md:px-0 lg:pt-24 lg:pb-28 lg:px-8">
-      <div className="relative max-w-lg sm:mx-auto md:ml-16 divide-y-2 divide-gray-200 lg:max-w-7xl lg:mx-auto">
-        <div className="mt-12 grid gap-16 pt-12 lg:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
+      <div className="relative max-w-lg sm:mx-auto divide-y-2 divide-gray-200 lg:max-w-7xl lg:mx-auto">
+        <div className="mt-12 grid gap-16 pt-12 md:grid-cols-3 lg:gap-x-5 lg:gap-y-12">
           {displayTerms.map((item) => (
-            <div className="lg:mx-auto" key={item.key}>
+            <div className="md:mx-auto" key={item.key}>
               <p className="text-xl font-semibold text-gray-900 pointer" onClick={() => openModal(item.term)}>{item.term}</p>
             </div>
           ))}
