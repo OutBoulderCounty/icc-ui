@@ -7,8 +7,10 @@ import {Link} from 'gatsby'
 
 const navigation = [
   { name: "About Us", href: "/about-us", current: false },
-  // { name: "Research", href: "#", current: false },
+  { name: "Research", href: "#", current: false },
   { name: "Get Involved", href: "/getinvolved", current: false },
+  { name: "Glossary", href: "/glossary", current: false },
+  { name: "Provider Sign Up", href: "/provider-signup", current: false },
 ]
 
 function classNames(...classes) {

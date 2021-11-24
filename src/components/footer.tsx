@@ -2,11 +2,15 @@ import React from "react"
 
 const navigation = {
   main: [
-    { name: 'About', href: '/about-us' },
+    { name: 'About Us', href: '/about-us' },
+    { name: 'Research', href: '#' },
     { name: 'Get Involved', href: '/getinvolved' },
+    { name: 'Glossary', href: '/glossary' },
+    { name: 'Provider Sign Up', href: "/provider-signup"}
     // { name: 'Press', href: '#' },
     // { name: 'Accessibility', href: '#' },
     // { name: 'Partners', href: '#' },
+
   ],
   social: [
     {
