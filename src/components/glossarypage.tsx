@@ -39,7 +39,7 @@ const Glossary = () => {
 
     if(!event.target.value || event.target.value === " ") {
       displayAList(); 
-      setActiveBtn('A');
+      setActiveBtn("A");
     }  
   }
 
