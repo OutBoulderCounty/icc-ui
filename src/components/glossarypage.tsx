@@ -33,7 +33,7 @@ const Glossary = () => {
 
   // SEARCH THROUGH GLOSSARY TERMS
   const handleChange = (event) => {
-    setActiveBtn(''); 
+    setActiveBtn(""); 
     const searchTerms = terms.filter((item) => item.term.toLowerCase().includes(event.target.value.toLowerCase()));  
     setDisplayTerms(searchTerms); 
 
