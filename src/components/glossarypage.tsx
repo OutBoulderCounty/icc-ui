@@ -37,7 +37,7 @@ const Glossary = () => {
     const searchTerms = terms.filter((item) => item.term.toLowerCase().includes(event.target.value.toLowerCase()));  
     setDisplayTerms(searchTerms); 
 
-    if(!event.target.value || event.target.value === ' ') {
+    if(!event.target.value || event.target.value === " ") {
       displayAList(); 
       setActiveBtn('A');
     }  
