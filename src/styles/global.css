@@ -7,3 +7,11 @@
     height: max-content;
   }
 }
+
+.active-btn {
+  box-shadow: 0 0 3px 3px #662f90;
+}
+
+.pointer:hover {
+  cursor: pointer;
+}

@@ -2,7 +2,7 @@ import * as React from "react"
 
 type Props = {
   children?: React.ReactNode
-  color: "violet" | "white" | "transparent"
+  color: "violet" | "white" | "transparent" | "transparent-dark"
   onClick?: () => {}
   className?: string
   btnClassName?: string
@@ -20,6 +20,8 @@ const Button: React.FC<Props> = ({
       ? "text-gray-700 bg-white hover:bg-violet hover:text-white hover:border-white"
       : color === "transparent"
       ? "bg-transparent text-white border-white hover:bg-violet"
+      : color === "transparent-dark"
+      ? "bg-transparent text-white border-white hover:bg-violet-dark"
       : "text-white bg-violet hover:bg-violet-dark"
   return (
     <div className={`sm:flex sm:items-center place-self-center ${className}`}>
