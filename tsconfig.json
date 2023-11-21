@@ -5,7 +5,7 @@
     "module": "commonjs",
     "strict": true,
     "skipLibCheck": true,
-    "types": ["react"],
+    "types": ["react", "jest", "@types/jest"],
     "esModuleInterop": true
   }
 }
