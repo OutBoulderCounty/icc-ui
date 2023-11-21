@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["dom", "es2015"],
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "types": ["react", "jest", "@types/jest", "node", "jest-axe"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
+}
