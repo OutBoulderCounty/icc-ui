@@ -22,10 +22,10 @@ module.exports = {
   useStaticQuery: jest.fn(() => ({
     site: {
       siteMetadata: {
-        title: `Inclusive Care CO`,
-        description: `TODO`,
-        author: `Out Boulder County`,
-        siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+        title: "Inclusive Care CO",
+        description: "TODO",
+        author: "Out Boulder County",
+        siteUrl: "https://gatsbystarterdefaultsource.gatsbyjs.io/",
       },
     },
   })),
